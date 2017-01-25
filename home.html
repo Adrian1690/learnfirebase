@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example firebase</title>
+	
+	<!-- Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<style>
+		#charger {
+			display: flex;
+			min-height: 100vh;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		#uploader {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 50%;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+		
+	<div class="container">
+		<buttom id="btnLogout" class="btn btn-primary" >Logout</buttom>
+	</div>
+			
+	<h1 id ="firstText" >Soy un Usuario Logeado</h1>
+
+	<input type="text" id="txtHabilidad" placeholder="Nueva habilidad">
+	<button id="insertHabilidad" class="btn btn-primary"> enviar habilida</button>
+
+	<pre id="objeto"> </pre>
+
+	<!-- Lista de Habilidades -->
+	<ul id="lista"></ul>
+	
+	<!-- Upload File -->
+	<div id="charger" class="container">
+		<progress value="0" max="100" id="uploader">0%</progress>
+    	<input type="file" value="upload" id="fileButton" />
+	</div>
+
+	<!-- End Upload File -->
+
+	<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<!-- Bootstrap Js-->
+		<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script src="js/app.js"></script>
+	  
+	<script src="js/home.js"></script>
+</body>
+</html>
