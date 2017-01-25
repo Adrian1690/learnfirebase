@@ -39,9 +39,22 @@
 	//Sync cambios lista
 	dbRefList.on('child_added', snap => {
 		const li = document.createElement('li');
+		const button  = document.createElement('button');
+		
+		button.className = 'glyphicon glyphicon-remove';
+		button.id = snap.key;
+
 		li.innerText = snap.val();
 		li.id = snap.key;
+		li.appendChild(button);
+
 		ulList.appendChild(li);	
+	});
+
+	// delete hability
+	$('body').on('click', '.glyphicon.glyphicon-remove', function ()  {
+		let idHability = this.id;
+		dbRefList.child(idHability).remove();
 	});
 
 	//Sync childs changed
