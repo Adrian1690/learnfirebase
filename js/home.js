@@ -60,7 +60,13 @@
 	//Sync childs changed
 	dbRefList.on('child_changed', snap => {
 		const liChanged = document.getElementById(snap.key);
+		const button  = document.createElement('button');
+		
+		button.className = 'glyphicon glyphicon-remove';
+		button.id = snap.key;
+
 		liChanged.innerText = snap.val();
+		liChanged.appendChild(button);
 	});
 
 	//sync childs removed
